@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrandKleaning | Cleaning and clear-outs in Durham</title>
+<meta name="description" content="Move-in, move-out, deep and office cleaning in Whitby, Oshawa, Pickering and Ajax. Lease-end clear-outs with a free inspection within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10302c; --ink-2:#3d5a55; --teal:#0f6b5f; --teal-d:#0a4f46;
+    --mint:#d9f2ea; --mint-2:#eef9f5; --paper:#fbfaf6; --sun:#f4c95d; --sun-d:#c99a1e; --line:#d7e3df;
+    --r:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.1}
+  .btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;border:0;cursor:pointer;font-size:16px;font-family:inherit;transition:background .15s, transform .15s}
+  .btn:hover{background:var(--teal-d);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:#fff}
+
+  /* brand */
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .mark{width:38px;height:38px;flex:none}
+  .wordmark{display:flex;align-items:baseline;line-height:1}
+  .wordmark .gk{font-family:"Archivo Black",sans-serif;font-size:22px;letter-spacing:-.01em;color:var(--ink)}
+  .wordmark .lean{font-family:"DM Sans",sans-serif;font-weight:700;font-size:14px;color:var(--teal);margin-left:1px;letter-spacing:.02em}
+  footer .wordmark .gk{font-size:18px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(251,250,246,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+  nav .links{display:flex;gap:20px;align-items:center;font-size:15px}
+  nav .links a{text-decoration:none;color:var(--ink-2)}
+  nav .links a:hover{color:var(--ink)}
+  nav .links .btn{color:#fff;padding:10px 18px;font-size:15px}
+  .lang{display:flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden;font-size:13px;font-weight:700}
+  .lang button{border:0;background:transparent;padding:6px 10px;cursor:pointer;font:inherit;color:var(--ink)}
+  .lang button.on{background:var(--ink);color:#fff}
+  @media (max-width:760px){nav .links a:not(.btn){display:none}}
+
+  /* hero */
+  .hero{padding:64px 0 52px}
+  .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .eyebrow{display:inline-block;background:var(--mint);color:var(--teal-d);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(38px,5.6vw,64px);margin-bottom:18px}
+  .hero h1 em{font-style:italic;color:var(--teal)}
+  .hero p.lead{font-size:19px;color:var(--ink-2);max-width:34em;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;font-size:14px;color:var(--ink-2)}
+  .trust span::before{content:"✓";color:var(--teal);font-weight:700;margin-right:6px}
+  .hero-card{background:var(--teal);color:#fff;border-radius:28px;padding:34px 30px;box-shadow:0 30px 60px -30px rgba(15,107,95,.6)}
+  .hero-card .big{font-family:"DM Serif Display",serif;font-size:72px;line-height:1;color:var(--sun)}
+  .hero-card h3{font-size:28px;margin:8px 0 12px}
+  .hero-card p{opacity:.9;font-size:16px;margin-bottom:22px}
+  .hero-card .btn{background:var(--sun);color:var(--ink)}
+  .hero-card .btn:hover{background:#fff}
+  .hero-art{position:relative}
+  .hero-art svg.scene{width:100%;height:auto;display:block;border-radius:28px}
+  .badge{position:absolute;left:-14px;bottom:-18px;background:var(--teal);color:#fff;border-radius:20px;padding:16px 18px;max-width:250px;box-shadow:0 20px 40px -20px rgba(15,107,95,.7)}
+  .badge .big{font-family:"DM Serif Display",serif;font-size:40px;line-height:1;color:var(--sun)}
+  .badge p{font-size:14px;margin-top:4px}
+  @media (max-width:860px){.hero .grid{grid-template-columns:1fr}.badge{left:10px}}
+
+  /* sections */
+  section{padding:64px 0}
+  .sec-head{max-width:660px;margin-bottom:34px}
+  .sec-head h2{font-size:clamp(32px,4vw,44px);margin-bottom:10px}
+  .sec-head p{color:var(--ink-2)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+  .card svg.pic{width:100%;height:auto;display:block;background:var(--mint-2)}
+  .card .body{padding:26px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:24px;margin-bottom:8px}
+  .card p{color:var(--ink-2);font-size:16px;margin-bottom:12px}
+  .card ul{list-style:none;font-size:15px;margin-bottom:14px}
+  .card li{padding:5px 0;border-top:1px dashed var(--line)}
+  .card .area{margin-top:auto;align-self:flex-start;font-size:13px;font-weight:700;color:var(--teal-d);background:var(--mint-2);padding:4px 10px;border-radius:999px}
+  @media (max-width:860px){.cards{grid-template-columns:1fr}}
+
+  /* lease band */
+  .lease{background:var(--ink);color:#fff;border-radius:28px;padding:44px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .lease h2{font-size:clamp(30px,4vw,42px);margin-bottom:14px}
+  .lease h2 span{color:var(--sun)}
+  .lease p{opacity:.86;margin-bottom:22px}
+  .lease .btn{background:var(--sun);color:var(--ink)}
+  .lease .btn:hover{background:#fff}
+  .lease svg.truck{width:100%;max-width:420px;height:auto;margin-top:26px;display:block}
+  .steps{list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .steps li:last-child{border-bottom:0}
+  .steps li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-weight:700}
+  .steps b{display:block}
+  .steps small{opacity:.75;font-size:14px}
+  @media (max-width:860px){.lease{grid-template-columns:1fr;padding:34px 22px}}
+
+  /* areas */
+  .areas{display:flex;flex-wrap:wrap;gap:12px}
+  .pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 20px;font-weight:500}
+  .pill::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px}
+  .pill.res::before{background:var(--teal)}
+  .pill.b2b::before{background:var(--sun)}
+  .legend{margin-top:14px;font-size:14px;color:var(--ink-2)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin:0 6px 0 0}
+
+  /* quote */
+  .quote{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+  form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{font-size:14px;font-weight:700;display:grid;gap:6px}
+  input,select,textarea{font:inherit;font-weight:400;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--teal);border-color:transparent}
+  textarea{min-height:90px;resize:vertical}
+  .contact-line{margin-top:18px;font-size:16px}
+  .contact-line div{padding:8px 0;border-bottom:1px solid var(--line)}
+  .contact-line b{display:inline-block;width:110px;color:var(--ink-2);font-weight:500}
+  #done{display:none;background:var(--mint);border-radius:16px;padding:18px;font-size:15px}
+  #done pre{white-space:pre-wrap;background:#fff;border-radius:10px;padding:12px;margin:10px 0;font-family:inherit;font-size:14px}
+  .formnote{font-size:14px;color:var(--ink-2);margin-top:8px}
+  #err{color:#a23b2a;font-size:14px}
+  @media (max-width:860px){.quote{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+
+  footer{padding:36px 0 48px;color:var(--ink-2);font-size:14px;border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<!-- reusable brand mark: GRAND K -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="gk" viewBox="0 0 40 40">
+      <rect width="40" height="40" rx="11" fill="#10302c"/>
+      <path d="M9 11h4.6v7.4L20.4 11H26l-7.3 7.6L26.6 29H21l-5.3-7.4-2.1 2.2V29H9z" fill="#fff"/>
+      <path d="M30.5 8l1.3 3.4 3.4 1.3-3.4 1.3-1.3 3.4-1.3-3.4-3.4-1.3 3.4-1.3z" fill="#f4c95d"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="GrandKleaning, by GRAND K">
+      <svg class="mark"><use href="#gk"/></svg>
+      <span class="wordmark"><span class="gk">GrandK</span><span class="lean">leaning</span></span>
+    </a>
+    <div class="links">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#lease" data-i18n="nav_lease">Lease-end</a>
+      <a href="#areas" data-i18n="nav_areas">Areas</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="on">EN</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
+      <a class="btn" href="#quote" data-i18n="nav_quote">Get a quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap grid">
+    <div>
+      <span class="eyebrow">Whitby · Oshawa · Pickering · Ajax</span>
+      <h1 data-i18n-html="hero_h1">Moving in or out? <em>Leave the clean to us.</em></h1>
+      <p class="lead" data-i18n="hero_lead">Move-in, move-out, deep and regular cleaning for homes in Durham Region, plus office cleaning and lease-end clear-outs for businesses.</p>
+      <div class="ctas">
+        <a class="btn" href="#quote" data-i18n="cta_quote">Get a free quote</a>
+        <a class="btn ghost" href="#lease" data-i18n="cta_lease">Leaving a lease?</a>
+      </div>
+      <div class="trust"><span data-i18n="t1">Flat price before we start</span><span data-i18n="t2">Same-week booking</span></div>
+    </div>
+    <div class="hero-card">
+      <div class="big" data-i18n="badge_big">24 hrs</div>
+      <h3 data-i18n="hc_h">Free lease-end inspection</h3>
+      <p data-i18n="badge_p">Free lease-end inspection for businesses moving out.</p>
+      <a class="btn" href="#quote" data-service="lease" data-i18n="lease_cta">Book a free inspection</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-i18n="svc_h">What we clean</h2>
+      <p data-i18n="svc_p">General-purpose cleaning for homes and workplaces. No industrial jobs, just spotless spaces done right.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="body">
+          <h3 data-i18n="c1_h">Home cleaning</h3>
+          <p data-i18n="c1_p">Regular or one-time visits for houses, townhomes and condos.</p>
+          <ul><li data-i18n="c1_l1">Weekly or bi-weekly plans</li><li data-i18n="c1_l2">Deep cleans</li><li data-i18n="c1_l3">Kitchens, baths, floors, dusting</li></ul>
+          <span class="area">Whitby · Oshawa · Pickering · Ajax</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="body">
+          <h3 data-i18n="c2_h">Move-in and move-out</h3>
+          <p data-i18n="c2_p">Empty-unit cleans that help renters get their deposit back and buyers start fresh.</p>
+          <ul><li data-i18n="c2_l1">Inside cabinets, fridge and oven</li><li data-i18n="c2_l2">Baseboards, windows, walls spot-cleaned</li><li data-i18n="c2_l3">Ready for inspection or listing photos</li></ul>
+          <span class="area">Whitby · Oshawa · Pickering · Ajax</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="body">
+          <h3 data-i18n="c3_h">Office and business</h3>
+          <p data-i18n="c3_p">After-hours cleaning for offices, clinics, studios and small retail.</p>
+          <ul><li data-i18n="c3_l1">Monthly contracts</li><li data-i18n="c3_l2">Washrooms, kitchens, floors, garbage</li><li data-i18n="c3_l3">Lease-end final cleans</li></ul>
+          <span class="area" data-i18n="c3_area">Durham Region and Toronto area</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lease">
+  <div class="wrap">
+    <div class="lease">
+      <div>
+        <h2 data-i18n-html="lease_h">Lease ending? We clear it out. <span>The inspection is free.</span></h2>
+        <p data-i18n="lease_p">Desks, chairs, shelving, appliances and leftovers: we remove what's left and give the space a final clean so you can hand back the keys. Items we can resell, donate or recycle are often removed at no charge.</p>
+        <a class="btn" href="#quote" data-service="lease" data-i18n="lease_cta">Book a free inspection</a>
+      </div>
+      <ol class="steps">
+        <li><div><b data-i18n="s1_b">Request an inspection</b><small data-i18n="s1_s">Tell us the address and your move-out date.</small></div></li>
+        <li><div><b data-i18n="s2_b">We visit within 24 hours</b><small data-i18n="s2_s">Walk-through and photos, no obligation.</small></div></li>
+        <li><div><b data-i18n="s3_b">You get our answer in writing</b><small data-i18n="s3_s">Whether we can remove everything, and whether it's free or a flat quote.</small></div></li>
+        <li><div><b data-i18n="s4_b">We clear and clean</b><small data-i18n="s4_s">The unit is handed back empty and clean.</small></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="areas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-i18n="ar_h">Where we work</h2>
+      <p data-i18n="ar_p">Homes in four Durham Region towns. Businesses in Durham and the Toronto area.</p>
+    </div>
+    <div class="areas">
+      <span class="pill res">Whitby</span><span class="pill res">Oshawa</span><span class="pill res">Pickering</span><span class="pill res">Ajax</span>
+      <span class="pill b2b">Toronto</span><span class="pill b2b">Scarborough</span><span class="pill b2b">Markham</span><span class="pill b2b">Vaughan</span>
+    </div>
+    <p class="legend"><i style="background:var(--teal)"></i><span data-i18n="lg1">Homes and businesses</span> &nbsp;&nbsp; <i style="background:var(--sun)"></i><span data-i18n="lg2">Businesses</span></p>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap quote">
+    <div class="sec-head">
+      <h2 data-i18n="q_h">Get a quote</h2>
+      <p data-i18n="q_p">Tell us a little about the job. We reply within 24 hours and book lease-end inspections within 24 hours.</p>
+      <a class="btn" id="formBtn" href="#" target="_blank" rel="noopener" style="margin-top:18px" data-i18n="q_formbtn">Fill out our online quote form</a>
+      <p class="formnote" data-i18n="q_formnote">Takes 2 minutes. Or use the form on this page.</p>
+      <div class="contact-line">
+        <div><b data-i18n="q_email">Email</b> <a id="emailLink" href="#"><span id="emailText"></span></a></div>
+        <div id="phoneRow"><b data-i18n="q_phone">Phone</b> <a id="phoneLink" href="#"><span id="phoneText"></span></a></div>
+        <div id="formRow"><b data-i18n="q_form">Online form</b> <a id="formLink" href="#" target="_blank" rel="noopener" data-i18n="q_formlink">Open our quick quote form</a></div>
+      </div>
+    </div>
+    <div>
+      <form id="qf" novalidate>
+        <p id="err" hidden></p>
+        <div class="row">
+          <label><span data-i18n="f_name">Your name</span><input name="name" required autocomplete="name"></label>
+          <label><span data-i18n="f_contact">Phone or email</span><input name="contact" required></label>
+        </div>
+        <div class="row">
+          <label><span data-i18n="f_service">Service</span>
+            <select name="service" id="svc">
+              <option value="moveout" data-i18n="o_moveout">Move-out clean</option>
+              <option value="movein" data-i18n="o_movein">Move-in clean</option>
+              <option value="deep" data-i18n="o_deep">Deep clean</option>
+              <option value="regular" data-i18n="o_regular">Regular home cleaning</option>
+              <option value="office" data-i18n="o_office">Office or business cleaning</option>
+              <option value="lease" data-i18n="o_lease">Lease-end clear-out and inspection</option>
+            </select>
+          </label>
+          <label><span data-i18n="f_town">Town or city</span>
+            <select name="town">
+              <option>Whitby</option><option>Oshawa</option><option>Pickering</option><option>Ajax</option>
+              <option value="Toronto area" data-i18n="o_toronto">Toronto area (business)</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label><span data-i18n="f_date">Date needed</span><input name="date" type="date"></label>
+          <label><span data-i18n="f_source">How did you hear about us?</span>
+            <select name="source">
+              <option value="Flyer" data-i18n="o_flyer">Flyer or mail</option><option>Facebook</option><option>Google</option>
+              <option>Kijiji / Marketplace</option><option value="Referral" data-i18n="o_ref">Referral</option><option value="Other" data-i18n="o_other">Other</option>
+            </select>
+          </label>
+        </div>
+        <label><span data-i18n="f_details">Details (size, bedrooms, square feet, items to remove)</span><textarea name="details"></textarea></label>
+        <label><span data-i18n="f_code">Promo code (optional)</span><input name="code" placeholder="MAIL5"></label>
+        <button class="btn" type="submit" data-i18n="f_submit">Request my quote</button>
+        <div id="done">
+          <b data-i18n="d_h">Almost there: send this to us.</b>
+          <p><span data-i18n="d_p">Tap the button to open your email app, or copy the request and send it to</span> <b id="doneEmail"></b>.</p>
+          <pre id="summary"></pre>
+          <a class="btn" id="mailBtn" href="#" data-i18n="d_open">Open email</a>
+          <button class="btn ghost" type="button" id="copyBtn" data-i18n="d_copy">Copy request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><svg class="mark" style="width:30px;height:30px"><use href="#gk"/></svg><span class="wordmark"><span class="gk">GrandK</span><span class="lean">leaning</span></span></a>
+    <div><span data-i18n="ft">Cleaning and clear-outs in Whitby, Oshawa, Pickering, Ajax and the Toronto area.</span> © <span id="yr"></span> GRAND K</div>
+  </div>
+</footer>
+
+<script>
+  // ====== EDIT THESE THREE LINES ======
+  const EMAIL = "grandk.ca@outlook.com";   // business email
+  const PHONE = "";                      // your phone number (leave "" to hide)
+  const FORM_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__r4AcWNUMVVXRzQyWVBVUUZBVlBQNDNDM1A1UzhJVS4u";                   // optional: your Google Form link (leave "" to hide)
+  // ====================================
+
+  const T = {
+    en: {
+      nav_services:"Services", nav_lease:"Lease-end", nav_areas:"Areas", nav_quote:"Get a quote",
+      hero_h1:"Moving in or out? <em>Leave the clean to us.</em>",
+      hero_lead:"Move-in, move-out, deep and regular cleaning for homes in Durham Region, plus office cleaning and lease-end clear-outs for businesses.",
+      cta_quote:"Get a free quote", cta_lease:"Leaving a lease?",
+      t1:"Flat price before we start", t2:"Same-week booking",
+      badge_big:"24 hrs", hc_h:"Free lease-end inspection", badge_p:"Moving your business out? We inspect within 24 hours and tell you in writing whether we can remove everything, often at no charge.",
+      svc_h:"What we clean", svc_p:"General-purpose cleaning for homes and workplaces. No industrial jobs, just spotless spaces done right.",
+      c1_h:"Home cleaning", c1_p:"Regular or one-time visits for houses, townhomes and condos.", c1_l1:"Weekly or bi-weekly plans", c1_l2:"Deep cleans", c1_l3:"Kitchens, baths, floors, dusting",
+      c2_h:"Move-in and move-out", c2_p:"Empty-unit cleans that help renters get their deposit back and buyers start fresh.", c2_l1:"Inside cabinets, fridge and oven", c2_l2:"Baseboards, windows, walls spot-cleaned", c2_l3:"Ready for inspection or listing photos",
+      c3_h:"Office and business", c3_p:"After-hours cleaning for offices, clinics, studios and small retail.", c3_l1:"Monthly contracts", c3_l2:"Washrooms, kitchens, floors, garbage", c3_l3:"Lease-end final cleans", c3_area:"Durham Region and Toronto area",
+      lease_h:"Lease ending? We clear it out. <span>The inspection is free.</span>",
+      lease_p:"Desks, chairs, shelving, appliances and leftovers: we remove what's left and give the space a final clean so you can hand back the keys. Items we can resell, donate or recycle are often removed at no charge.",
+      lease_cta:"Book a free inspection",
+      s1_b:"Request an inspection", s1_s:"Tell us the address and your move-out date.",
+      s2_b:"We visit within 24 hours", s2_s:"Walk-through and photos, no obligation.",
+      s3_b:"You get our answer in writing", s3_s:"Whether we can remove everything, and whether it's free or a flat quote.",
+      s4_b:"We clear and clean", s4_s:"The unit is handed back empty and clean.",
+      ar_h:"Where we work", ar_p:"Homes in four Durham Region towns. Businesses in Durham and the Toronto area.",
+      lg1:"Homes and businesses", lg2:"Businesses",
+      q_h:"Get a quote", q_p:"Tell us a little about the job. We reply within 24 hours and book lease-end inspections within 24 hours.",
+      q_email:"Email", q_phone:"Phone", q_form:"Online form", q_formlink:"Open our quick quote form", q_formbtn:"Fill out our online quote form", q_formnote:"Takes 2 minutes. Or use the form on this page.",
+      f_name:"Your name", f_contact:"Phone or email", f_service:"Service", f_town:"Town or city", f_date:"Date needed",
+      f_source:"How did you hear about us?", f_details:"Details (size, bedrooms, square feet, items to remove)", f_code:"Promo code (optional)", f_submit:"Request my quote",
+      o_moveout:"Move-out clean", o_movein:"Move-in clean", o_deep:"Deep clean", o_regular:"Regular home cleaning", o_office:"Office or business cleaning", o_lease:"Lease-end clear-out and inspection",
+      o_toronto:"Toronto area (business)", o_flyer:"Flyer or mail", o_ref:"Referral", o_other:"Other",
+      d_h:"Almost there: send this to us.", d_p:"Tap the button to open your email app, or copy the request and send it to", d_open:"Open email", d_copy:"Copy request", d_copied:"Copied ✓", d_copyfail:"Select the text above to copy",
+      err:"Please add your name and a phone number or email.",
+      ft:"Cleaning and clear-outs in Whitby, Oshawa, Pickering, Ajax and the Toronto area.",
+      m_subject:"Quote request", m_name:"Name", m_contact:"Contact", m_service:"Service", m_town:"Town", m_date:"Date needed", m_flex:"flexible", m_source:"Heard about us", m_code:"Promo code", m_details:"Details", m_lang:"Language"
+    },
+    fr: {
+      nav_services:"Services", nav_lease:"Fin de bail", nav_areas:"Secteurs", nav_quote:"Soumission",
+      hero_h1:"Vous emménagez ou déménagez? <em>On s'occupe du ménage.</em>",
+      hero_lead:"Ménage d'emménagement, de déménagement, en profondeur et régulier pour les maisons de la région de Durham, ainsi que l'entretien de bureaux et le débarras de fin de bail pour les entreprises.",
+      cta_quote:"Soumission gratuite", cta_lease:"Votre bail se termine?",
+      t1:"Prix fixe avant de commencer", t2:"Rendez-vous la même semaine",
+      badge_big:"24 h", hc_h:"Inspection de fin de bail gratuite", badge_p:"Votre entreprise déménage? Nous inspectons en moins de 24 heures et vous confirmons par écrit si nous pouvons tout enlever, souvent sans frais.",
+      svc_h:"Nos services", svc_p:"Ménage général pour maisons et lieux de travail. Aucun travail industriel, simplement des espaces impeccables.",
+      c1_h:"Ménage résidentiel", c1_p:"Visites régulières ou ponctuelles pour maisons, maisons en rangée et condos.", c1_l1:"Forfaits hebdomadaires ou aux deux semaines", c1_l2:"Ménage en profondeur", c1_l3:"Cuisines, salles de bain, planchers, époussetage",
+      c2_h:"Emménagement et déménagement", c2_p:"Ménage de logements vides pour aider les locataires à récupérer leur dépôt et les acheteurs à repartir à neuf.", c2_l1:"Intérieur des armoires, du frigo et du four", c2_l2:"Plinthes, fenêtres, murs nettoyés", c2_l3:"Prêt pour l'inspection ou les photos d'inscription",
+      c3_h:"Bureaux et commerces", c3_p:"Entretien après les heures d'ouverture pour bureaux, cliniques, studios et petits commerces.", c3_l1:"Contrats mensuels", c3_l2:"Toilettes, cuisines, planchers, déchets", c3_l3:"Ménage final de fin de bail", c3_area:"Région de Durham et région de Toronto",
+      lease_h:"Fin de bail? On vide les lieux. <span>L'inspection est gratuite.</span>",
+      lease_p:"Bureaux, chaises, étagères, électroménagers et objets laissés sur place : on enlève tout et on fait le ménage final pour que vous puissiez remettre les clés. Les articles qu'on peut revendre, donner ou recycler sont souvent enlevés sans frais.",
+      lease_cta:"Réserver une inspection gratuite",
+      s1_b:"Demandez une inspection", s1_s:"Indiquez-nous l'adresse et votre date de départ.",
+      s2_b:"Visite en moins de 24 heures", s2_s:"Visite des lieux et photos, sans engagement.",
+      s3_b:"Réponse par écrit", s3_s:"Si nous pouvons tout enlever, et si c'est gratuit ou à prix fixe.",
+      s4_b:"On vide et on nettoie", s4_s:"Le local vous est remis vide et propre.",
+      ar_h:"Où nous travaillons", ar_p:"Maisons dans quatre villes de la région de Durham. Entreprises dans Durham et la région de Toronto.",
+      lg1:"Maisons et entreprises", lg2:"Entreprises",
+      q_h:"Demander une soumission", q_p:"Parlez-nous un peu du travail. Nous répondons en moins de 24 heures et planifions les inspections de fin de bail en moins de 24 heures.",
+      q_email:"Courriel", q_phone:"Téléphone", q_form:"Formulaire", q_formlink:"Ouvrir le formulaire de soumission", q_formbtn:"Remplir notre formulaire en ligne", q_formnote:"Prend 2 minutes. Ou utilisez le formulaire sur cette page.",
+      f_name:"Votre nom", f_contact:"Téléphone ou courriel", f_service:"Service", f_town:"Ville", f_date:"Date souhaitée",
+      f_source:"Comment nous avez-vous connus?", f_details:"Détails (superficie, chambres, pieds carrés, articles à enlever)", f_code:"Code promo (facultatif)", f_submit:"Demander ma soumission",
+      o_moveout:"Ménage de déménagement", o_movein:"Ménage d'emménagement", o_deep:"Ménage en profondeur", o_regular:"Ménage résidentiel régulier", o_office:"Entretien de bureaux ou commerces", o_lease:"Débarras et inspection de fin de bail",
+      o_toronto:"Région de Toronto (entreprises)", o_flyer:"Dépliant ou courrier", o_ref:"Recommandation", o_other:"Autre",
+      d_h:"Presque terminé : envoyez-nous ceci.", d_p:"Touchez le bouton pour ouvrir votre application de courriel, ou copiez la demande et envoyez-la à", d_open:"Ouvrir le courriel", d_copy:"Copier la demande", d_copied:"Copié ✓", d_copyfail:"Sélectionnez le texte ci-dessus pour le copier",
+      err:"Veuillez indiquer votre nom et un numéro de téléphone ou un courriel.",
+      ft:"Ménage et débarras à Whitby, Oshawa, Pickering, Ajax et dans la région de Toronto.",
+      m_subject:"Demande de soumission", m_name:"Nom", m_contact:"Contact", m_service:"Service", m_town:"Ville", m_date:"Date souhaitée", m_flex:"flexible", m_source:"Nous a connus par", m_code:"Code promo", m_details:"Détails", m_lang:"Langue"
+    }
+  };
+
+  const $ = s => document.querySelector(s);
+  let lang = "en";
+  try { const saved = localStorage.getItem("gk_lang"); if (saved === "fr" || saved === "en") lang = saved; } catch(e){}
+  if (lang === "en" && /^fr/i.test(navigator.language || "")) lang = "fr";
+
+  function setLang(l){
+    lang = l; const d = T[l];
+    document.documentElement.lang = l;
+    document.querySelectorAll("[data-i18n]").forEach(el => { const k = el.dataset.i18n; if (d[k] != null) el.textContent = d[k]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => { const k = el.dataset.i18nHtml; if (d[k] != null) el.innerHTML = d[k]; });
+    document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === l));
+    document.title = l === "fr" ? "GrandKleaning | Ménage et débarras dans Durham" : "GrandKleaning | Cleaning and clear-outs in Durham";
+    try { localStorage.setItem("gk_lang", l); } catch(e){}
+  }
+  document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+  $("#yr").textContent = new Date().getFullYear();
+  $("#emailText").textContent = EMAIL; $("#emailLink").href = "mailto:" + EMAIL;
+  if (!PHONE) { $("#phoneRow").style.display = "none"; } $("#phoneText").textContent = PHONE; $("#phoneLink").href = "tel:" + PHONE.replace(/[^0-9+]/g, "");
+  $("#doneEmail").textContent = EMAIL;
+  if (FORM_URL) { $("#formRow").style.display = "none"; $("#formBtn").href = FORM_URL; } else { $("#formRow").style.display = "none"; $("#formBtn").style.display = "none"; document.querySelector(".formnote").style.display = "none"; }
+
+  document.querySelectorAll("[data-service]").forEach(a => a.addEventListener("click", () => { $("#svc").value = a.dataset.service; }));
+
+  $("#qf").addEventListener("submit", e => {
+    e.preventDefault();
+    const d = T[lang], f = new FormData(e.target), err = $("#err");
+    if (!f.get("name") || !f.get("contact")) { err.textContent = d.err; err.hidden = false; return; }
+    err.hidden = true;
+    const svcText = $("#svc").selectedOptions[0].textContent;
+    const townSel = e.target.town.selectedOptions[0].textContent;
+    const srcSel = e.target.source.selectedOptions[0].textContent;
+    const text = [
+      d.m_name + ": " + f.get("name"), d.m_contact + ": " + f.get("contact"), d.m_service + ": " + svcText,
+      d.m_town + ": " + townSel, d.m_date + ": " + (f.get("date") || d.m_flex), d.m_source + ": " + srcSel,
+      d.m_code + ": " + (f.get("code") || "-"), d.m_details + ": " + (f.get("details") || "-"), d.m_lang + ": " + lang.toUpperCase()
+    ].join("\n");
+    $("#summary").textContent = text;
+    $("#mailBtn").href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(d.m_subject + ": " + svcText + " (" + townSel + ")") + "&body=" + encodeURIComponent(text);
+    $("#done").style.display = "block";
+    $("#done").scrollIntoView({behavior:"smooth", block:"center"});
+  });
+
+  $("#copyBtn").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText($("#summary").textContent); $("#copyBtn").textContent = T[lang].d_copied; }
+    catch(e) { $("#copyBtn").textContent = T[lang].d_copyfail; }
+  });
+
+  setLang(lang);
+</script>
+</body>
+</html>
